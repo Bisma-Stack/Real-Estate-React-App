@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+    --primary:#1f3e72;
+    --secondary:rgba(255,255,255,0.78);
+    --blue-gradient:linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%);
+    --orange-gradient:linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
+    --black:#131110;
+    --blue:#4066ff;
+    --lightBlue:#eeeeff;
+    --white:#F5F5F5;
+    --shadow:0px 23px 21px -8px rgba(136,160,255,0.25);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+/* Should all the section consistence as well as padding in the website , website particularly align   */
+.paddings{
+    padding: 1.5rem;
+}
+                    /* This inner width for the normal scren-size */
+.innerWidth{
+    width: 100%;
+}
+/* its for Nav items like home and  img */
+.flexCenter{
+    display: flex;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flexStart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+ .flexEnd{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+ }
+ .flexColCnter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .flexColStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+ }
+.flexColEnd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.primaryText{ 
+    color: #1f3e72;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.secondaryText{
+    color: rgba(140 1390139);
+    font-size: 0.9rem;
+}
+.orangeText{
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.button{ 
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    background: var(--blue-gradient);
+    border:none;
+    border-radius: 4px;
+    /* Transition upword on hoverig */
+    transition: all 300ms ease-in;
+}
+/* Scaling up effect */
+.button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* media quries */
+
+                              /* As well as here innerWidth is for different Screen Sizes */
+           
+@media(min-width:1536px){
+    .innerWidth{         
+        max-width: 1280px;
+        margin: auto;
+    }
+}
+@media (min-width:640px){
+    .paddings{
+        padding: 4rem;
+    }
+}
+
+@media (min-width:1280px),(min-width:768px){
+    .paddings{
+        padding: 2rem;
+    }
 }
